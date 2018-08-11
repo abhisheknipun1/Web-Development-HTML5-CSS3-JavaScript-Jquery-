@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>
+Video Page
+</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+		<a class="navbar-brand" href="#" style="display:flex;align-items:center;">
+			<img src="BCCI_logo.png" class="img-responsive" style="height:30px;margin-right:10px;">
+			Board of Control for Cricket in India (BCCI)
+		</a>
+    </div>
+  </div>
+</nav>
+<div class="row">
+	<div class="col-lg-4 col-lg-offset-3">
+		<div id="container"></div>
+	</div>
+</div>
+<script>
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'line',
+		width: 800,
+        borderColor: 'blue ',
+        borderWidth: 2
+    },
+    title: {
+        text: 'Battting Statistics of Indian Team'
+    },
+	subtitle:{
+		text: 'T20 Cricket Match'
+	},
+    xAxis: {
+        categories: [5,10,15],
+		"tickmarkPlacement": "on",
+		title: {
+            enabled: true,
+            text: 'Overs',
+            style: {
+                fontWeight: 'normal'
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Runs'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: 'Runs',
+        data: [40,75,140],
+		showInLegend: false
+    }],
+    exporting: { enabled: false }
+});
+
+</script>
+</body>
+</html>

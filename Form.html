@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title> HTML Form </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+		<a class="navbar-brand" href="#" style="display:flex;align-items:center;">
+			<img src="Xenalogo.jpg" class="img-responsive" style="height:50px; margin-right:10px;">
+			<span style="margin-left:250px">"Xena Events" - Hot Balloon Riding Event from Feb 28th 2017 onwards for 5 days</span>
+		</a>
+    </div>
+  </div>
+</nav>
+<style>
+ th, td {
+    border: 1px solid black; }
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=number], input[type=email], input[list=browsers] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color:blue ;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+</style>
+<body>
+
+<h1><center>HTML Form<center></h1>
+	<form>
+	  <div class="container" >
+	    <label><b>Name</b></label>
+	    <input type="text" placeholder="Enter Your Name" name="Name" pattern="[A-Za-z ]+" required>
+	
+	    <label><b>Age</b></label>
+	    <input type="number" placeholder="Enter Your Age" name="Age" min = "18" required>
+		
+		<label><b>Email</b></label>
+	    <input type="email" placeholder="Enter Your Email" name="Email" required>
+	
+	    <label><b>City</b></label>
+	       <input list="browsers" name="browser" placeholder="Enter Your City" required >
+			<datalist id="browsers">
+				<option value="Rajkot">
+				<option value="Vizag">
+				<option value="Bangalore">
+			</datalist>  
+	    <button type="submit">Submit</button>
+	  </div>
+	</form>
+
+</body>
+</html>

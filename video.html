@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>
+Video Page
+</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+		<a class="navbar-brand" href="#" style="display:flex;align-items:center;">
+			<img src="Videologo1.jpg" class="img-responsive" style="height:30px;margin-right:10px;">
+			Awesome Online videos
+		</a>
+    </div>
+  </div>
+</nav>
+<div class="row">
+	<div class="col-lg-4 col-lg-offset-4">
+		<video id="myVideo" width="600" height="500">
+		  <source src="video.MP4" type="video/mp4">
+		  Your browser does not support HTML5 video.
+		</video>
+	</div>
+</div>
+<div class="row" style="padding:20px;">
+	<div class="col-lg-1 col-lg-offset-5">
+		<button onclick="playVid()" type="button" style="height: 108px;width: 120px;"><i style="font-size:100px;" class="fas fa-play-circle"></i></button>
+	</div>
+	<div class="col-lg-1">
+		<button onclick="pauseVid()" type="button" style="height: 108px;width: 120px;"><i style="font-size:100px;" class="fas fa-pause"></i></button><br> 
+	</div>
+</div>
+
+<script> 
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+    vid.play(); 
+} 
+
+function pauseVid() { 
+    vid.pause(); 
+} 
+</script> 
+</body>
+</html>
